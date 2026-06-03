@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIVE - Lost Signal</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        ARCHIVE SECTION RESTORED
+        PARTIAL DATA RECOVERED
+        PROCEED WITH CAUTION
+    -->
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="customCursor"></div>
+
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="noise-layer"></div>
+
+    <!-- Glitch Flash Overlay -->
+    <div class="glitch-flash" id="glitchFlash"></div>
+
+    <div id="archivePage" class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="index.html" class="back-link">[ RETURN ]</a>
+            <h1 class="page-title">ARCHIVED TRANSMISSIONS</h1>
+            <div class="page-status">STATUS: PARTIALLY CORRUPTED</div>
+        </header>
+
+        <!-- Archive Content -->
+        <main class="archive-content">
+            <!-- Archive Entry 1 -->
+            <div class="archive-entry">
+                <div class="entry-header">
+                    <span class="entry-id">TRANSMISSION_001</span>
+                    <span class="entry-date">OCTOBER 23, 1987</span>
+                    <span class="entry-status damaged">DAMAGED</span>
+                </div>
+                <div class="entry-body">
+                    <p class="entry-text recovered">
+                        We detected something unusual yesterday. The frequency 87.3 MHz...
+                        it shouldn't exist. It's not assigned to any station.
+                    </p>
+                    <p class="entry-text recovered">
+                        When we tuned in, there was nothing but static. But the equipment
+                        showed something was <span class="redacted">REDACTED</span>.
+                    </p>
+                    <p class="entry-text corrupted" data-text="THEY ARE ALREADY HERE">
+                        [DATA CORRUPTED - UNABLE TO RECOVER]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Archive Entry 2 -->
+            <div class="archive-entry">
+                <div class="entry-header">
+                    <span class="entry-id">TRANSMISSION_007</span>
+                    <span class="entry-date">NOVEMBER 1, 1987</span>
+                    <span class="entry-status recovered">PARTIAL</span>
+                </div>
+                <div class="entry-body">
+                    <p class="entry-text">
+                        The signal is getting stronger. We've recorded it every night
+                        between 3:00 AM and 3:30 AM. There's something beneath the static.
+                    </p>
+                    <p class="entry-text">
+                        Audio analysis reveals voices. Not human voices. They're
+                        speaking in a pattern we can't decipher.
+                    </p>
+                    <p class="entry-text warning">
+                        Dr. Morrison wants to continue research. I told him it's
+                        dangerous. He won't listen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Archive Entry 3 -->
+            <div class="archive-entry">
+                <div class="entry-header">
+                    <span class="entry-id">TRANSMISSION_013</span>
+                    <span class="entry-date">NOVEMBER 12, 1987</span>
+                    <span class="entry-status critical">CRITICAL</span>
+                </div>
+                <div class="entry-body">
+                    <p class="entry-text recovered">
+                        Morrison is gone. He's been gone for three days now.
+                    </p>
+                    <p class="entry-text recovered">
+                        Last night I heard something coming from the radio.
+                        Even though it was turned off.
+                    </p>
+                    <p class="entry-text corrupted" data-text="HE'S NOT HIMSELF ANYMORE">
+                        [DATA CORRUPTED - UNABLE TO RECOVER]
+                    </p>
+                    <p class="entry-text recovered flicker-text">
+                        I burned the tapes. All of them. But I can still hear it.
+                        The signal. It's inside my head now.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Archive Entry 4 - Heavily Corrupted -->
+            <div class="archive-entry heavily-corrupted">
+                <div class="entry-header">
+                    <span class="entry-id glitch-text">TRANSMISSIO??</span>
+                    <span class="entry-date">N0V3MB3R ??, 1???</span>
+                    <span class="entry-status">LOST</span>
+                </div>
+                <div class="entry-body">
+                    <p class="entry-text glitch-heavy">
+                        IF YOU'RE READING THIS
+                        STOP
+                        STOP
+                        STOP
+                    </p>
+                    <p class="entry-text glitch-heavy">
+                        THE SIGNAL IS NOT COMING FROM OUTSIDE
+                        IT'S COMING FROM INSIDE
+                    </p>
+                    <p class="entry-text static-noise">
+                        [STATIC OVERFLOW DETECTED]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Corrupted Image -->
+            <div class="archive-image">
+                <div class="image-container corrupted-img">
+                    <div class="image-noise"></div>
+                    <div class="image-text">IMAGE DATA LOST</div>
+                </div>
+                <p class="image-caption">Recovered photograph from Station Theta</p>
+            </div>
+        </main>
+
+        <!-- Hidden Text -->
+        <div class="hidden-archive-text">
+            <span class="hover-reveal" data-message="They never closed the station">Move cursor here</span>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-text">ARCHIVE INTEGRITY: 23%</div>
+            <div class="footer-text">FILES RESTORED: 4 of 287</div>
+            <div class="footer-text corrupted">TRANSMISSION ENDS</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

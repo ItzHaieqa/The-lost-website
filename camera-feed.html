@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMERA FEED - Lost Signal</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        SURVEILLANCE FOOTAGE
+        LAST RECORDING: NOV 14, 1987
+        DO NOT WATCH ALONE
+    -->
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="customCursor"></div>
+
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="noise-layer"></div>
+
+    <!-- Glitch Flash Overlay -->
+    <div class="glitch-flash" id="glitchFlash"></div>
+
+    <div id="cameraPage" class="page-container dark">
+        <!-- Header -->
+        <header class="page-header camera-header">
+            <a href="index.html" class="back-link">[ RETURN ]</a>
+            <h1 class="page-title">SURVEILLANCE SYSTEM</h1>
+            <div class="page-status offline">STATUS: OFFLINE SINCE 1987</div>
+        </header>
+
+        <!-- Camera Grid -->
+        <main class="camera-content">
+            <div class="camera-grid">
+                <!-- Camera 1 -->
+                <div class="camera-feed">
+                    <div class="camera-screen">
+                        <div class="camera-static"></div>
+                        <div class="camera-noise"></div>
+                        <div class="camera-text">
+                            <span class="cam-label">CAM 01</span>
+                            <span class="cam-location">MAIN ENTRANCE</span>
+                            <span class="cam-status lost">SIGNAL LOST</span>
+                        </div>
+                        <div class="camera-timestamp">1987-11-14 03:17:33</div>
+                        <div class="scan-line"></div>
+                    </div>
+                </div>
+
+                <!-- Camera 2 -->
+                <div class="camera-feed">
+                    <div class="camera-screen">
+                        <div class="camera-static"></div>
+                        <div class="camera-noise"></div>
+                        <div class="camera-text">
+                            <span class="cam-label">CAM 02</span>
+                            <span class="cam-location">CONTROL ROOM</span>
+                            <span class="cam-status intermittent">INTERMITTENT</span>
+                        </div>
+                        <div class="camera-timestamp">1987-11-14 03:17:33</div>
+                        <div class="scan-line"></div>
+                        <!-- Hidden figure -->
+                        <div class="camera-ghost hidden-figure"></div>
+                    </div>
+                </div>
+
+                <!-- Camera 3 -->
+                <div class="camera-feed">
+                    <div class="camera-screen corrupted-screen">
+                        <div class="camera-static"></div>
+                        <div class="camera-noise heavy"></div>
+                        <div class="camera-text">
+                            <span class="cam-label glitch">CAM 03</span>
+                            <span class="cam-location">ARCHIVE</span>
+                            <span class="cam-status critical">CRITICAL ERROR</span>
+                        </div>
+                        <div class="camera-timestamp">??-??-?? 03:??:??</div>
+                        <div class="glitch-blocks"></div>
+                    </div>
+                </div>
+
+                <!-- Camera 4 -->
+                <div class="camera-feed">
+                    <div class="camera-screen">
+                        <div class="camera-static"></div>
+                        <div class="camera-noise"></div>
+                        <div class="camera-text">
+                            <span class="cam-label">CAM 04</span>
+                            <span class="cam-location">TRANSMISSION TOWER</span>
+                            <span class="cam-status lost">NO SIGNAL</span>
+                        </div>
+                        <div class="camera-timestamp">1987-11-14 03:17:33</div>
+                        <div class="scan-line reverse"></div>
+                    </div>
+                </div>
+
+                <!-- Camera 5 - Active but disturbing -->
+                <div class="camera-feed active">
+                    <div class="camera-screen has-image">
+                        <div class="camera-static light"></div>
+                        <div class="camera-noise minimal"></div>
+                        <div class="camera-text">
+                            <span class="cam-label">CAM 05</span>
+                            <span class="cam-location">SECTOR 7</span>
+                            <span class="cam-status active">RECORDING</span>
+                        </div>
+                        <div class="camera-timestamp flicker">1987-11-14 03:17:33</div>
+                        <div class="camera-image corrupted-image">
+                            <div class="image-static"></div>
+                        </div>
+                        <!-- Creepy element -->
+                        <div class="camera-anomaly">
+                            <div class="anomaly-text">STANDING BEHIND YOU</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camera 6 -->
+                <div class="camera-feed">
+                    <div class="camera-screen">
+                        <div class="camera-static"></div>
+                        <div class="camera-noise"></div>
+                        <div class="camera-text">
+                            <span class="cam-label">CAM 06</span>
+                            <span class="cam-location">STORAGE</span>
+                            <span class="cam-status lost">OFFLINE</span>
+                        </div>
+                        <div class="camera-timestamp">1987-11-14 03:17:33</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Playback Section -->
+            <div class="video-section">
+                <div class="video-container">
+                    <div class="video-screen">
+                        <div class="video-static-animated"></div>
+                        <div class="video-overlay">
+                            <div class="rec-icon">● REC</div>
+                            <div class="video-time">03:17:33</div>
+                        </div>
+                    </div>
+                    <div class="video-controls">
+                        <div class="control-btn" data-action="play">▶</div>
+                        <div class="control-btn" data-action="pause">⏸</div>
+                        <div class="control-btn" data-action="stop">■</div>
+                        <div class="control-btn" data-action="rewind">⏪</div>
+                        <div class="control-btn" data-action="forward">⏩</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <p class="video-title">LAST RECORDING</p>
+                    <p class="video-filename">CAM05_19871114_031733.mp4</p>
+                    <p class="video-status">FILE CORRUPTED - PARTIAL RECOVERY POSSIBLE</p>
+                    <p class="video-warning">WARNING: CONTENT MAY BE DISTURBING</p>
+                </div>
+            </div>
+
+            <!-- Scary message -->
+            <div class="camera-message">
+                <p class="message-text hidden-reveal">
+                    The cameras still record.<br>
+                    Even when there's no power.<br>
+                    <span class="warning-text">What records them?</span>
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-text">CAMERAS ACTIVE: 1 of 6</div>
+            <div class="footer-text">RECORDING TIME REMAINING: 3:17:33</div>
+            <div class="footer-text corrupted">THEY SEE YOU TOO</div>
+        </footer>
+    </div>
+
+    <!-- Jumpscare prevention - just creepy ambient -->
+    <div class="ambient-face hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

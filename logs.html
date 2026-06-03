@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGS - Lost Signal</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        LOG FILE RESTORED
+        ATTEMPTING RECONSTRUCTION...
+        FRAGMENTS RECOVERED
+    -->
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="customCursor"></div>
+
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="noise-layer"></div>
+
+    <!-- Glitch Flash Overlay -->
+    <div class="glitch-flash" id="glitchFlash"></div>
+
+    <div id="logsPage" class="page-container">
+        <!-- Header -->
+        <header class="page-header dark">
+            <a href="index.html" class="back-link">[ RETURN ]</a>
+            <h1 class="page-title">SYSTEM LOGS</h1>
+            <div class="page-status error">WARNING: LOG CORRUPTION DETECTED</div>
+        </header>
+
+        <!-- Logs Terminal Style -->
+        <main class="logs-content">
+            <div class="log-terminal">
+                <div class="log-entry">
+                    <span class="log-time">1987-10-15 02:47:33</span>
+                    <span class="log-type">INFO</span>
+                    <span class="log-message">Signal detection system initialized</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-10-15 02:47:41</span>
+                    <span class="log-type">INFO</span>
+                    <span class="log-message">Scanning frequency range 87.0 - 110.0 MHz</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-10-17 03:12:07</span>
+                    <span class="log-type warning">WARNING</span>
+                    <span class="log-message">Anomaly detected at 87.3 MHz</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-10-17 03:14:22</span>
+                    <span class="log-type error">ERROR</span>
+                    <span class="log-message">Signal classification failed - Unknown format</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-10-23 03:17:00</span>
+                    <span class="log-type">INFO</span>
+                    <span class="log-message">Recording initiated</span>
+                </div>
+
+                <div class="log-entry corrupted">
+                    <span class="log-time">1987-10-23 03:??:??</span>
+                    <span class="log-type critical">CRITICAL</span>
+                    <span class="log-message">FILE CONTENT UNREADABLE</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-01 03:17:33</span>
+                    <span class="log-type warning">WARNING</span>
+                    <span class="log-message">Station temperature dropping without cause</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-01 03:18:01</span>
+                    <span class="log-type error">ERROR</span>
+                    <span class="log-message">Motion sensor triggered in restricted area</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-01 03:18:15</span>
+                    <span class="log-type">INFO</span>
+                    <span class="log-message">No personnel detected in sector 7</span>
+                </div>
+
+                <div class="log-entry corrupted">
+                    <span class="log-time">1987-11-01 03:??:??</span>
+                    <span class="log-type critical">ALERT</span>
+                    <span class="log-message glitch-text">DO NOT OPEN THE DOOR</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-08 03:17:00</span>
+                    <span class="log-type">INFO</span>
+                    <span class="log-message">Dr. Morrison requesting extended access</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-08 03:17:45</span>
+                    <span class="log-type warning">WARNING</span>
+                    <span class="log-message">Request denied - Protocol violation</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-08 03:18:00</span>
+                    <span class="log-type error">ERROR</span>
+                    <span class="log-message">Override detected - Unknown administrator</span>
+                </div>
+
+                <div class="log-entry corrupted">
+                    <span class="log-time">1987-11-?? ??:??:??</span>
+                    <span class="log-type critical">CRITICAL</span>
+                    <span class="log-message">D? M??R?S?? N? L??G?? R??C?G?I??D</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-12 03:17:33</span>
+                    <span class="log-type warning">WARNING</span>
+                    <span class="log-message">All archive files flagged for deletion</span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-12 03:17:45</span>
+                    <span class="log-type critical">CRITICAL</span>
+                    <span class="log-message">Deletion failed - Files protected by unknown source</span>
+                </div>
+
+                <div class="log-entry corrupted heavy">
+                    <span class="log-time">??87-11-?? 03:??:??</span>
+                    <span class="log-type fatal">FATAL</span>
+                    <span class="log-message">
+                        THEY ARE IN THE SYSTEM<br>
+                        THEY ARE IN THE STATION<br>
+                        THEY ARE IN YOUR HEAD<br>
+                        DO NOT LISTEN
+                    </span>
+                </div>
+
+                <div class="log-entry">
+                    <span class="log-time">1987-11-14 03:17:00</span>
+                    <span class="log-type">SYSTEM</span>
+                    <span class="log-message">Station sealed - No entry/exit authorized</span>
+                </div>
+
+                <div class="log-entry final">
+                    <span class="log-time">1987-11-14 03:17:33</span>
+                    <span class="log-type critical">END</span>
+                    <span class="log-message">If you found this... run.</span>
+                </div>
+            </div>
+
+            <!-- Corrupted Section -->
+            <div class="corrupted-section">
+                <div class="corrupted-header">RECOVERING FRAGMENTS...</div>
+                <div class="corrupted-text">
+                    <span class="fragment">HELP</span>
+                    <span class="fragment">ME</span>
+                    <span class="fragment">THEY</span>
+                    <span class="fragment">CAN</span>
+                    <span class="fragment">SEE</span>
+                    <span class="fragment">YOU</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-text">RECOVERED LOGS: 19 of 847</div>
+            <div class="footer-text">LAST ENTRY: November 14, 1987</div>
+            <div class="footer-text flicker">STATION STATUS: ABANDONED</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

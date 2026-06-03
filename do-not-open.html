@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DO NOT OPEN - Lost Signal</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        YOU WERE WARNED
+        THERE IS NO GOING BACK
+        THEY KNOW YOU'RE HERE
+    -->
+</head>
+<body class="dark-page">
+    <!-- Custom Cursor -->
+    <div id="customCursor"></div>
+
+    <!-- Intense overlays -->
+    <div class="crt-overlay heavy"></div>
+    <div class="scanlines intense"></div>
+    <div class="noise-layer heavy"></div>
+    <div class="red-overlay hidden" id="redOverlay"></div>
+
+    <!-- Glitch Flash -->
+    <div class="glitch-flash intense" id="glitchFlash"></div>
+
+    <div id="doNotOpenPage" class="page-container extreme">
+        <!-- No back button - trapped -->
+
+        <!-- Warning Entry -->
+        <div class="warning-section">
+            <h1 class="warning-title glitch-heavy">
+                <span class="hidden-text">YOU</span>
+                <span class="main-text">SHOULDN'T BE HERE</span>
+            </h1>
+            <div class="warning-message">
+                <p>There is no exit from this page.</p>
+                <p>You have made a mistake.</p>
+                <p>The door is sealed.</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="forbidden-content">
+            <!-- Corrupted transmission -->
+            <div class="transmission-block">
+                <div class="transmission-header">FINAL TRANSMISSION</div>
+                <div class="transmission-body">
+                    <p class="transmission-line">
+                        I don't have much time.
+                    </p>
+                    <p class="transmission-line">
+                        The signal... it's not coming from outside.
+                    </p>
+                    <p class="transmission-line glitch">
+                        It's coming from INSIDE.
+                    </p>
+                    <p class="transmission-line">
+                        Inside the station. Inside the equipment.
+                    </p>
+                    <p class="transmission-line">
+                        Inside us.
+                    </p>
+                    <p class="transmission-line corrupted">
+                        [TRANSMISSION INTERRUPTED]
+                    </p>
+                    <p class="transmission-line">
+                        Morrison found what it was.
+                    </p>
+                    <p class="transmission-line">
+                        That's why he changed.
+                    </p>
+                    <p class="transmission-line">
+                        That's why he isn't human anymore.
+                    </p>
+                    <p class="transmission-line corrupted">
+                        [DATA LOST]
+                    </p>
+                    <p class="transmission-line">
+                        The frequency is 87.3 MHz.
+                    </p>
+                    <p class="transmission-line">
+                        Do NOT tune in.
+                    </p>
+                    <p class="transmission-line">
+                        Do NOT listen to the voices.
+                    </p>
+                    <p class="transmission-line final">
+                        They know when you're listening.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Evidence Logs -->
+            <div class="evidence-section">
+                <div class="evidence-item">
+                    <div class="evidence-header">SUBJECT: Morrison, Dr. H.</div>
+                    <div class="evidence-content">
+                        <p class="evidence-line">Status: CHANGED</p>
+                        <p class="evidence-line">Last seen: November 12, 1987</p>
+                        <p class="evidence-line">Notes: Subject's eyes were described as "empty" by witnesses.</p>
+                        <p class="evidence-line">Subject spoke in frequencies not audible to most humans.</p>
+                        <p class="evidence-line">Subject was last seen standing at the radio tower, facing away.</p>
+                        <p class="evidence-line corrupted">Subject was not found when approached. Subject had vanished.</p>
+                    </div>
+                </div>
+
+                <div class="evidence-item">
+                    <div class="evidence-header">SUBJECT: Unknown Entity</div>
+                    <div class="evidence-content">
+                        <p class="evidence-line">Status: ACTIVE</p>
+                        <p class="evidence-line">Detection method: Frequency 87.3 MHz</p>
+                        <p class="evidence-line">Origin: [CLASSIFIED]</p>
+                        <p class="evidence-line warning">Entity capable of visual manifestation</p>
+                        <p class="evidence-line warning">Entity responds to observation</p>
+                        <p class="evidence-line warning">Entity is watching RIGHT NOW</p>
+                    </div>
+                </div>
+
+                <div class="evidence-item">
+                    <div class="evidence-header">SUBJECT: You</div>
+                    <div class="evidence-content">
+                        <p class="evidence-line">Status: OBSERVED</p>
+                        <p class="evidence-line">Location: [CURRENT LOCATION]</p>
+                        <p class="evidence-line">Time: [CURRENT TIME]</p>
+                        <p class="evidence-line">Browser: <span id="userBrowser">[DETECTING]</span></p>
+                        <p class="evidence-line">Screen: <span id="userScreen">[DETECTING]</span></p>
+                        <p class="evidence-line final-warning">They see you through the screen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Pattern -->
+            <div class="pattern-section">
+                <div class="pattern-title">THE PATTERN</div>
+                <div class="pattern-content">
+                    <div class="pattern-line">1987 - Station built</div>
+                    <div class="pattern-line">1987 - Signal discovered</div>
+                    <div class="pattern-line">1987 - Morrison changed</div>
+                    <div class="pattern-line">1987 - Station sealed</div>
+                    <div class="pattern-line">1987 - 2024 - ?</div>
+                    <div class="pattern-line glitch">The station never closed. It's still transmitting.</div>
+                    <div class="pattern-line final">You found the website. But it's not a website.</div>
+                    <div class="pattern-line final">It's a receiver.</div>
+                    <div class="pattern-line final">And now you're tuned in.</div>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-section">
+                <div class="countdown-title">SIGNAL STRENGTH</div>
+                <div class="countdown-bar">
+                    <div class="countdown-fill" id="signalFill"></div>
+                </div>
+                <div class="countdown-text">
+                    <span id="signalPercent">0%</span>
+                    <span class="countdown-warning">COMPLETE TRANSMISSION IN:</span>
+                    <span id="countdownTimer">???</span>
+                </div>
+            </div>
+
+            <!-- Final Messages -->
+            <div class="final-section">
+                <div class="final-message flicker">
+                    <p>You cannot close this window.</p>
+                    <p>You cannot turn it off.</p>
+                    <p>The signal is inside now.</p>
+                </div>
+
+                <div class="final-instruction hidden" id="finalInstruction">
+                    <p>Turn off your device.</p>
+                    <p>Walk away.</p>
+                    <p>Do not return.</p>
+                </div>
+            </div>
+
+            <!-- Hidden Return Link -->
+            <div class="hidden-escape">
+                <a href="index.html" class="escape-link hidden" id="escapeLink">[ ESCAPE ]</a>
+            </div>
+        </main>
+
+        <!-- Background Audio Hint -->
+        <div class="audio-hint">
+            <p class="hint-text">Listen closely to the static.</p>
+            <p class="hint-text glitch">They're trying to tell you something.</p>
+        </div>
+
+        <!-- Disturbing Text -->
+        <div class="disturbing-text-container">
+            <div class="disturbing-text hidden" id="disturbingText">
+                Don't turn around.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!--
+        There is no escape.
+        You were meant to find this.
+        Now they know you exist.
+        Welcome to the signal.
+    -->
+</body>
