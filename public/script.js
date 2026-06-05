@@ -1012,3 +1012,4 @@ window.signal = {
     year: () => console.log('%c1987. The year everything changed.', 'color: #8b0000;'),
     exit: () => console.log('%cThere is no exit.', 'color: #ff0000;')
 };
+
