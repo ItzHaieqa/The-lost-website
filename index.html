@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Signal</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        IF YOU'RE READING THIS...
+        YOU WERE NOT SUPPOSED TO FIND THIS
+        SIGNAL LOST: 1987
+        THEY ARE WATCHING
+    -->
+</head>
+<body>
+    <!-- Audio Element -->
+    <audio id="ambientAudio" loop></audio>
+
+    <!-- Custom Cursor -->
+    <div id="customCursor"></div>
+
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="noise-layer"></div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <div class="static-bg"></div>
+        <div class="loading-content">
+            <div class="glitch-text" id="glitchText"></div>
+            <button id="enterBtn" class="enter-button hidden">ENTER</button>
+        </div>
+        <div class="flicker-overlay"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="mainContainer" class="hidden">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-glitch">
+                <h1 class="title">ARCHIVE SYSTEM v0.87</h1>
+            </div>
+            <div class="clock-container">
+                <span class="clock">3:17 AM</span>
+                <span class="clock-date">NOVEMBER 14, 1987</span>
+            </div>
+            <div class="warning-label flicker">UNAUTHORIZED ACCESS DETECTED</div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-item" data-page="archive">
+                <span class="nav-text">ARCHIVE</span>
+                <span class="nav-glitch">ERR0R</span>
+            </div>
+            <div class="nav-item" data-page="logs">
+                <span class="nav-text">LOGS</span>
+                <span class="nav-glitch">ACCESS DENIED</span>
+            </div>
+            <div class="nav-item" data-page="camera-feed">
+                <span class="nav-text">CAMERA FEED</span>
+                <span class="nav-glitch">NO SIGNAL</span>
+            </div>
+            <div class="nav-item danger" data-page="do-not-open" data-secret="true">
+                <span class="nav-text">DO NOT OPEN</span>
+                <span class="nav-glitch">STAY AWAY</span>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Fake Terminal Window -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span>SIGNAL_RECOVERY.exe</span>
+                    <div class="terminal-controls">
+                        <span>_</span>
+                        <span>□</span>
+                        <span>×</span>
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <p class="terminal-line">> Initializing signal recovery protocol...</p>
+                    <p class="terminal-line">> Scanning frequencies: 87.3 MHz - 108.9 MHz</p>
+                    <p class="terminal-line error">> ERROR: Signal contaminated</p>
+                    <p class="terminal-line">> Attempting decompression...</p>
+                    <p class="terminal-line warning">> WARNING: Unknown source detected</p>
+                    <p class="terminal-line">> Partial data recovered: [REDACTED]</p>
+                    <p class="terminal-line typing">> _</p>
+                </div>
+            </div>
+
+            <!-- File Browser -->
+            <div class="file-browser">
+                <div class="browser-header">CORRUPTED_FILE_DIRECTORY</div>
+                <div class="file-grid">
+                    <div class="file-item" data-secret="true">
+                        <div class="file-icon">📁</div>
+                        <span class="file-name">evidence_1987</span>
+                        <span class="file-status">CORRUPTED</span>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">📄</div>
+                        <span class="file-name">transmission_01.log</span>
+                        <span class="file-status">PARTIAL</span>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">🖼️</div>
+                        <span class="file-name">photo_recovered.jpg</span>
+                        <span class="file-status">DAMAGED</span>
+                    </div>
+                    <div class="file-item" data-secret="true">
+                        <div class="file-icon">📁</div>
+                        <span class="file-name">.hidden</span>
+                        <span class="file-status">???</span>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">🎬</div>
+                        <span class="file-name">surveillance.mp4</span>
+                        <span class="file-status">NO DATA</span>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">🔊</div>
+                        <span class="file-name">recording.wav</span>
+                        <span class="file-status">STATIC</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Popup -->
+            <div class="warning-popup hidden" id="warningPopup">
+                <div class="popup-content">
+                    <div class="popup-header">SECURITY ALERT</div>
+                    <p class="popup-message">Your presence has been logged.</p>
+                    <p class="popup-message">Leave now.</p>
+                    <button class="popup-close">CLOSE</button>
+                </div>
+            </div>
+
+            <!-- Audio Controls -->
+            <div class="audio-controls">
+                <button id="muteBtn" class="mute-button">
+                    <span class="mute-icon">🔇</span>
+                    <span class="mute-text">Enable Audio</span>
+                </button>
+            </div>
+
+            <!-- Hidden Message -->
+            <div class="hidden-message" id="hiddenMessage">
+                They can see you through the screen.
+            </div>
+
+            <!-- Secret Password Modal -->
+            <div class="password-modal hidden" id="passwordModal">
+                <div class="modal-content">
+                    <div class="modal-header">RESTRICTED ACCESS</div>
+                    <input type="password" id="passwordInput" placeholder="ENTER CODE" maxlength="8">
+                    <div class="modal-buttons">
+                        <button id="passwordSubmit">UNLOCK</button>
+                        <button id="passwordCancel">CANCEL</button>
+                    </div>
+                    <p class="password-hint">Hint: The signal began in...</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-text">
+                <span class="signal-status">SIGNAL: </span>
+                <span class="signal-value" id="signalValue">SEARCHING...</span>
+            </div>
+            <div class="footer-text">
+                <span>SYSTEM INTEGRITY: </span>
+                <span class="integrity-bar">
+                    <span class="integrity-fill" id="integrityFill"></span>
+                </span>
+                <span id="integrityValue">67%</span>
+            </div>
+            <div class="footer-text flicker">
+                <span>DO NOT TRUST THE STATIC</span>
+            </div>
+        </footer>
+
+        <!-- Creepy Subtitles -->
+        <div class="subtitle-container">
+            <p class="subtitle" id="subtitle"></p>
+        </div>
+
+        <!-- Video Player Fake -->
+        <div class="video-player hidden" id="videoPlayer">
+            <div class="video-screen">
+                <div class="video-static"></div>
+                <div class="video-text">SIGNAL LOST</div>
+            </div>
+            <div class="video-controls">
+                <button class="video-btn">▶</button>
+                <button class="video-btn">⏸</button>
+                <button class="video-btn">⏹</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secret Easter Egg Page -->
+    <div class="secret-page hidden" id="secretPage">
+        <div class="secret-content">
+            <div class="secret-text">
+                You found it.<br>
+                The frequency is 87.3.<br>
+                They've been waiting since 1987.<br>
+                <span class="blink">Do not tune in.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Glitch Flash Overlay -->
+    <div class="glitch-flash" id="glitchFlash"></div>
+
+    <!-- Access Denied Popup -->
+    <div class="access-denied hidden" id="accessDenied">
+        <div class="denied-content">
+            <div class="denied-icon">X</div>
+            <div class="denied-text">ACCESS DENIED</div>
+            <div class="denied-code">Error Code: 0x7F3A</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!--
+        CONSOLE LOG FOUND:
+        signal.init(1987, 87.3);
+        // The year everything changed
+        // The frequency that shouldn't exist
+    -->
+</body>
+</html>
